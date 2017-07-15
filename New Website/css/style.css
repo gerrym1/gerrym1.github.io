@@ -7,6 +7,33 @@ background-color: #000000;
 background-repeat: no-repeat;
 background-size: 100%;
 }
+nav{ 
+	background-color: #FFFCFF;
+	font-family: Anton;
+	width: auto;
+
+	
+}
+a{ display: block;
+	float: left;
+	padding: 20px;
+	text-decoration: none;
+	color: #FFF6F0;
+	font-size: 1.5em;
+}
+
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	clear: both;
+	height: 0;
+	font-size: 0;
+
+}
+a:hover {
+	background-color: #80210D;
+}
 header{color:#FFF6F0;
 	margin-top: 2%;
 	margin-bottom: 5%;
@@ -20,6 +47,9 @@ header{color:#FFF6F0;
 	padding: 2em;
     
 }
+
+	
+
 #desktop{
     width: 60%;
 	margin-top: 5%;
@@ -35,13 +65,16 @@ header{color:#FFF6F0;
 }
 
 p{
-	margin-left: 2%;
-	margin-right: 2%;
-	width: 96%;
+	margin-left: 5%;
+	margin-right: 5%;
+	width: 90%;
 	padding: 2em;
 	color: #FFF6F0;
+
 }
-#intro{ font-size: 1.5em;
+
+
+#intro{ font-size: 1.75em;
 	line-height: 1.5em;
 	font-weight: bold;
 	font-family: 'Arapey', serif;
@@ -50,7 +83,7 @@ p{
 
 
 }
-p{ font-size: 1.2em;
+p{ font-size: 1.5em;
 	line-height: 1.2em;
 	font-family: 'Arapey',serif;
 }
@@ -70,7 +103,7 @@ width: auto;
 line-height: 2em;
 padding: 2em;
 text-decoration: underline;
-font-family: 'Anton', sans-serif;
+font-family: 'Parisienne', sans-serif;
 }
 
 
@@ -84,11 +117,4 @@ font-family: 'Anton', sans-serif;
 	color: #FFF6F0;
 
 }	
-a{
-	display: inline-block;
-	line-height: 2em;
-	margin-left: 45%;
-	margin-right: 45%;
-	font-size:1.5em;
-	width: auto;
-}
+
