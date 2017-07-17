@@ -50,7 +50,7 @@ header{color:#FFF6F0;
 
 	
 
-#desktop{
+#responsive{
     width: 60%;
 	margin-top: 5%;
 	margin-right: 20%;
@@ -117,4 +117,6 @@ font-family: 'Parisienne', sans-serif;
 	color: #FFF6F0;
 
 }	
-
+#about{
+	font-family: 'Arapey'
+}
