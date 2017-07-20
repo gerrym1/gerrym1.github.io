@@ -121,6 +121,11 @@ font-family: 'Parisienne', sans-serif;
 #about{
 	font-family: 'Arapey'
 }
+#detail{
+	line-height: 1.5em;
+	color: #3FFF99;
+
+}
 input[type=text], select, textarea {
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */  
