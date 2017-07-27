@@ -12,14 +12,14 @@ img{
 	width: 100%;
 }
 nav{ 
-	background-color: #000000;
-	font-family: Anton;
+	
+	font-family: 'Anton';
 	width: auto;
 
 	
 }
 a{ display: block;
-	float: left;
+	width: 20%;
 	padding: 20px;
 	text-decoration: none;
 	color: #000000;
@@ -62,11 +62,7 @@ header{color:#000000;
 	border: solid;
 	border-radius: 20px;
 }
-#Me{
-	padding: 1em;
-	width: 20%;
-	height: 12%;
-}
+
 
 p{
 	margin-left: 5%;
@@ -144,7 +140,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-/* When moving the mouse over the submit button, add a darker green color */
+
 input[type=submit]:hover {
     background-color: #45a049;
 }
@@ -156,4 +152,19 @@ input[type=submit]:hover {
     padding: 20px;
     margin-right: 5%;
     margin-left: 5%;
+}
+#address{
+	margin-right: 40%;
+	margin-left: 45%;
+	margin-bottom: 5%;
+	width: auto;
+	display: inline block;
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family:'Arapey';
+	line-height: 1.5em
+}
+#contact{
+	font-size: 1.5em;
+
 }
