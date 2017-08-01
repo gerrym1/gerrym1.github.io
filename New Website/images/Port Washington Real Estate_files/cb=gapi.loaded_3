@@ -1,0 +1,20 @@
+/* JS */ gapi.loaded_3(function(_){var window=this;
+/*
+ Portions of this code are from MochiKit, received by
+ The Closure Authors under the MIT license. All other code is Copyright
+ 2005-2009 The Closure Authors. All Rights Reserved.
+*/
+_.In=function(a,c){this.jZ=[];this.Bba=a;this.V$=c||null;this.R1=this.L_=!1;this.rW=void 0;this.K9=this.Nda=this.f6=!1;this.H5=0;this.Vb=null;this.y3=0};_.In.prototype.cancel=function(a){if(this.L_)this.rW instanceof _.In&&this.rW.cancel();else{if(this.Vb){var c=this.Vb;delete this.Vb;a?c.cancel(a):(c.y3--,0>=c.y3&&c.cancel())}this.Bba?this.Bba.call(this.V$,this):this.K9=!0;this.L_||this.bu(new _.nB)}};_.In.prototype.K$=function(a,c){this.f6=!1;Jn(this,a,c)};
+var Jn=function(a,c,f){a.L_=!0;a.rW=f;a.R1=!c;Kn(a)};_.k=_.In.prototype;_.k.kY=function(){if(this.L_){if(!this.K9)throw new Mn;this.K9=!1}};_.k.Ga=function(a){this.kY();Jn(this,!0,a)};_.k.bu=function(a){this.kY();Jn(this,!1,a)};_.k.zh=function(a,c){return this.Ep(a,null,c)};_.k.Ep=function(a,c,f){this.jZ.push([a,c,f]);this.L_&&Kn(this);return this};_.k.then=function(a,c,f){var g,h,l=new _.C(function(a,c){g=a;h=c});this.Ep(g,function(a){a instanceof _.nB?l.cancel():h(a)});return l.then(a,c,f)};_.Rp(_.In);
+_.In.prototype.u$=_.b(3);
+var On=function(a){return(0,_.Ee)(a.jZ,function(a){return _.vd(a[1])})},Kn=function(a){if(a.H5&&a.L_&&On(a)){var c=a.H5,f=yB[c];f&&(_.D.clearTimeout(f.El),delete yB[c]);a.H5=0}a.Vb&&(a.Vb.y3--,delete a.Vb);c=a.rW;for(var g=f=!1;a.jZ.length&&!a.f6;){var h=a.jZ.shift(),l=h[0],n=h[1];h=h[2];if(l=a.R1?n:l)try{var q=l.call(h||a.V$,c);_.kf(q)&&(a.R1=a.R1&&(q==c||q instanceof Error),a.rW=c=q);if(_.Wp(c)||"function"===typeof _.D.Promise&&c instanceof _.D.Promise)g=!0,a.f6=!0}catch(t){c=t,a.R1=!0,On(a)||(f=
+!0)}}a.rW=c;g&&(q=(0,_.H)(a.K$,a,!0),g=(0,_.H)(a.K$,a,!1),c instanceof _.In?(c.Ep(q,g),c.Nda=!0):c.then(q,g));f&&(c=new zB(c),yB[c.El]=c,a.H5=c.El)},Mn=function(){_.se.call(this)};_.J(Mn,_.se);Mn.prototype.message="Deferred has already fired";Mn.prototype.name="AlreadyCalledError";_.nB=function(){_.se.call(this)};_.J(_.nB,_.se);_.nB.prototype.message="Deferred was canceled";_.nB.prototype.name="CanceledError";var zB=function(a){this.El=_.D.setTimeout((0,_.H)(this.nia,this),0);this.V3=a}; zB.prototype.nia=function(){delete yB[this.El];throw this.V3;};var yB={};
+
+var yD,xD,vD,wD;_.IM=function(a,c){a.Ep(null,c,void 0)};
+_.E1=function(a,c){var f=c||{};c=f.document||window.document;var g=_.wx(a),h=_.Br("SCRIPT"),l={wp:h,Ss:void 0},n=new _.In(xD,l),q=null,t=null!=f.timeout?f.timeout:5E3;0<t&&(q=window.setTimeout(function(){vD(h,!0);n.bu(new wD(1,"Timeout reached for loading script "+g))},t),l.Ss=q);h.onload=h.onreadystatechange=function(){h.readyState&&"loaded"!=h.readyState&&"complete"!=h.readyState||(vD(h,f.Eu||!1,q),n.Ga(null))};h.onerror=function(){vD(h,!0,q);n.bu(new wD(0,"Error while loading script "+g))};l=f.attributes||
+{};_.sf(l,{type:"text/javascript",charset:"UTF-8"});_.Ef(h,l);_.fv(h,a);yD(c).appendChild(h);return n};yD=function(a){var c=(a||window.document).getElementsByTagName("HEAD");return c&&0!=c.length?c[0]:a.documentElement};xD=function(){if(this&&this.wp){var a=this.wp;a&&"SCRIPT"==a.tagName&&vD(a,!0,this.Ss)}};vD=function(a,c,f){null!=f&&_.D.clearTimeout(f);a.onload=_.gh;a.onerror=_.gh;a.onreadystatechange=_.gh;c&&window.setTimeout(function(){_.Tf(a)},0)}; wD=function(a,c){var f="Jsloader error (code #"+a+")";c&&(f+=": "+c);_.se.call(this,f);this.code=a};_.J(wD,_.se);
+
+var JM=(_.P("drive-realtime/server")||"https://drive.google.com/otservice")+"/api";_.Ka(_.bb,"PQ",[]).push(function(a){var c=_.E1(_.l_(JM),{timeout:2E4});_.IM(c,function(){window.console&&window.console.error&&window.console.error("Failed to load Drive Realtime API library.");a()});c.zh(a)});
+
+});
+// Google Inc.
